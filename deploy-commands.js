@@ -19,7 +19,7 @@ const rest = new REST({ version: '10' }).setToken(process.env.TOKEN);
         console.log('Slash parancsok frissítése...');
 
         await rest.put(
-            Routes.applicationGuildCommands(process.env.CLIENT_ID, process.env.GUILD_ID),
+            Routes.applicationCommands(process.env.CLIENT_ID),
             { body: commands }
         );
 
@@ -27,4 +27,5 @@ const rest = new REST({ version: '10' }).setToken(process.env.TOKEN);
     } catch (error) {
         console.error(error);
     }
+
 })();
