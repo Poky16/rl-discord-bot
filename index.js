@@ -84,9 +84,10 @@ client.on("guildCreate", async guild => {
 
     }
 
-    console.log(Rank roleok létrehozva: ${guild.name});
+    console.log(`Rank roleok létrehozva: ${guild.name}`);
 
 });
 
 client.login(process.env.TOKEN);
+
 
