@@ -20,7 +20,7 @@ module.exports = {
 
     try {
 
-      const url = https://api.tracker.gg/api/v2/rocket-league/standard/profile/${platform}/${player};
+      const url = `https://api.tracker.gg/api/v2/rocket-league/standard/profile/${platform}/${player}`;
 
       const res = await fetch(url);
       const data = await res.json();
