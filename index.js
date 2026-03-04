@@ -26,7 +26,7 @@ for (const file of commandFiles) {
 
 client.once("ready", () => {
 
-    console.log(Bot elindult: ${client.user.tag});
+    console.log(`Bot elindult: ${client.user.tag}`);
 
 });
 
@@ -89,3 +89,4 @@ client.on("guildCreate", async guild => {
 });
 
 client.login(process.env.TOKEN);
+
