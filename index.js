@@ -1,38 +1,6 @@
-client.on("guildCreate", async (guild) => {
-
-    const roles = [
-        "Bronze",
-        "Silver",
-        "Gold",
-        "Platinum",
-        "Diamond",
-        "Champion",
-        "Grand Champion",
-        "Supersonic Legend"
-    ];
-
-    for (const roleName of roles) {
-
-        const existing = guild.roles.cache.find(r => r.name === roleName);
-
-        if (!existing) {
-            await guild.roles.create({
-                name: roleName,
-                color: "Random",
-                reason: "RL Rank Bot role"
-            });
-        }
-    }
-
-});
 require("dotenv").config();
 
-const { 
-    Client, 
-    GatewayIntentBits, 
-    Collection 
-} = require("discord.js");
-
+const { Client, GatewayIntentBits, Collection } = require("discord.js");
 const fs = require("fs");
 const path = require("path");
 
@@ -57,7 +25,9 @@ for (const file of commandFiles) {
 }
 
 client.once("ready", () => {
-    console.log(`Bot elindult: ${client.user.tag}`);
+
+    console.log(Bot elindult: ${client.user.tag});
+
 });
 
 client.on("interactionCreate", async interaction => {
@@ -107,17 +77,15 @@ client.on("guildCreate", async guild => {
             await guild.roles.create({
                 name: roleName,
                 color: "Random",
-                reason: "RL Rank Bot role creation"
+                reason: "RL Rank Bot role"
             });
 
         }
 
     }
 
-    console.log(`Rank roleok létrehozva: ${guild.name}`);
+    console.log(Rank roleok létrehozva: ${guild.name});
 
 });
 
 client.login(process.env.TOKEN);
-
-
